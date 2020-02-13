@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clone do Portal do Aluno</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="caixa-login">
+        <h2 class="textoBemVindo">
+            Bem-Vindo 
+        </h2>
+        <h2 class="textoaoEspacoEstudante">
+            ao Espaço do Estudante
+        </h2>
+        <input type="text" placeholder="Usuário" class="textoLogin">
+        <br>
+        <br>
+        <input type="text" placeholder="Senha" class="textoSenha">
+        <br>
+        <br>
+        <button class="botaoLogin" onclick="login()">Entrar</button>
+        <br>
+        <br>
+        <button class="botaoEsqueceuSenha">Esqueceu sua senha?</button>
+        
+        <script>              
+            function login(){  
+            var texto = document.querySelector('.textoLogin').value;  
+            var senha = document.querySelector('.textoSenha').value;  
+            if(texto == 'Nathan' && senha == '123'){
+            alert("Logado"); 
+            window.open('telaPrincipal.html');              
+            }
+            else{
+            alert('Errado');
+            }       
+            };
+        </script>    
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-Vindo | Tela Principal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <select class="opcoes" id="opcoes">
+        <option>Escolha o que deseja</option>
+        <option>Principal</option>
+        <option onclick="dadosPessoais()">Dados Pessoais</option>
+        <option>Calendário Escolar</option>
+        <option>Desempenho</option>
+        <option>Documentos</option>
+        <option>Quadro de Horários</option>
+        <option>Financeiro</option>
+        <option>Fale Conosco</option>
+        <option>Av. de Satisfação</option>
+    </select>
+    <h2 class="textoBemVindo2">
+        Bem-Vindo
+    </h2>
+    <h2 class="textoaoEspacoEstudante2">
+        ao Espaço do Estudante
+    </h2>
+    <button onclick="dadosPessoais()" class="dadosPessoais">Dados Pessoais</button>
+    
+    <script>
+        function dadosPessoais(){
+            window.open('telaDadosPessoais')
+        }
+    </script>
+    
+    
+</body>
+</html>
