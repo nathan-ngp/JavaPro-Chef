@@ -6,7 +6,10 @@
     <title>Clone do Portal do Aluno</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>    
+<body>  
+    
+    <button class="botaoSesi" onclick="pagina()"></button>  
+    
     <div class="caixa-login">
         <h2 class="textoBemVindo">
             Bem-Vindo 
@@ -24,7 +27,10 @@
         <br>
         <br>
         <button class="botaoEsqueceuSenha">Esqueceu sua senha?</button>
-        
+        <br>
+        <img src="googleplay.png" class="imagemGooglePlay">
+        <img src="apple.png" class="imagemApple">
+                
         <script>              
             function login(){  
             var texto = document.querySelector('.textoLogin').value;  
@@ -37,7 +43,13 @@
             alert('Errado');
             }       
             };
+
+            function pagina(){
+                window.open('telaLogin.html');
+            }
         </script>    
     </div>
+
+    <label  class="aParadaAli">Uma nova maneira para você vivenciar os seus estudos.</label>
 </body>
 </html>
