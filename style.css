@@ -1,10 +1,12 @@
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
     background-color: white;
+    background: url(/imagens/senaizera.jpg);
+    background-size: 1950px 970px;
 }
 
 
-.caixa-login{
+#caixa-login{
     width: 600px;
     height: 400px;
     position: relative;
@@ -18,7 +20,7 @@ body{
     text-align: center;
 }
 
-.textoLogin{
+#textoLogin{
     border-width: 2px;
     border-radius: 2px;
     border: 1px solid;
@@ -26,13 +28,13 @@ body{
     width: 270px;
     height: 20px;
     padding-left: 20px;
-    background-image: url(usuario.png);
+    background-image: url(/imagens/usuario.png);
     background-position: left;
     background-repeat: no-repeat;
     background-size: 15px 13px;
 }
 
-.textoSenha{
+#textoSenha{
     border-width: 2px;
     border-radius: 2px;
     border: 1px solid;
@@ -40,23 +42,23 @@ body{
     width: 270px;
     height: 20px;
     padding-left: 20px;
-    background-image: url(senha.png);
+    background-image: url(/imagens/senha.png);
     background-position: left;
     background-repeat: no-repeat;
     background-size: 15px 13px;
 }
 
-.botaoLogin{
+#botaoLogin{
    color: white;
    background-color:  rgb(30, 149, 133);
    border:none!important;
-    border-radius: 12px;   
+    border-radius: 17px;   
     height: 30px;
     width: 150px;
     font-size: 16px;
 }
 
-.botaoEsqueceuSenha{
+#botaoEsqueceuSenha{
     color:gray;
     background-color: transparent;
    border:none!important;  
@@ -65,49 +67,56 @@ body{
     font-size: 13px;
 }
 
-.textoBemVindo{
+#textoBemVindo{
     color: rgb(30, 149, 133);
     text-align: center;
     font-size: 30px;
+    margin: 30px 0 0 0;
 }
 
-.textoaoEspacoEstudante{
+#textoaoEspacoEstudante{
     color: gray;
     font-size: 12px;
 }
 
-.imagemApple{
+#imagemApple{
     width: 150px;
-    height: 70px;
+    height: 73px;
 }
 
-.imagemGooglePlay{
+#imagemGooglePlay{
     width: 150px;
     height: 56px;
     position: relative;
     top: -7px;
 }
 
-.botaoSesi{
+#botaoSesi{
     position: fixed;
     left: 430px;
     top: 20px;
-    width: 200px;
-    height: 64px;
+    width: 1000px;
+    height: 50px;
     background-color: transparent;
-    border: none;
-    background-image: url(sesi.png);
+    border: 0 none;
+    background-image: url(/imagens/logo.svg);
+    box-shadow: none;
+    outline: 0;
 }
 
-.aParadaAli{
+#banner{
+    color: #1E9585;
+    background-color: white;
+    padding-left: 5px;
+    padding-top: 2px;
+    font-size: 30px;
+    line-height: 28px;
+    margin: 0;
+    padding-left: 10px;
+    border-radius: 15px 0 0 15px;
     position: fixed;
-    border: 2px gray solid;
-    border-radius: 5px 0px 0px 5px;
-    background-color:whitesmoke;
-    color: rgb(30, 149, 133);
-    width: 300px;
-    height: 75px;
-    font-size: 20px;
+    top: 800px;
+    left: 1500px;
 }
 
 /*Muda Tela*/
@@ -120,27 +129,44 @@ body{
   margin: 50px 0px 50px 0px;
   background-color:rgb(236, 236, 236);
     color: rgb(30, 149, 133);  
+    font-family: sans-serif;
 }
 
 .textoBemVindo2{
     color:  rgb(30, 149, 133);
-    text-align: center;      
+    text-align: center;
+    position: fixed;
+    top: 0px;  
+    left: 900px;   
     }
 
 .textoaoEspacoEstudante2{
     color: gray;
     font-size: 10px;
     text-align: center;
+    position: fixed;
+    top: 45px;  
+    left: 905px;   
 }
 
 .dadosPessoais{
-    width: 70px;
-    height: 70px;
+    width: 100px;
+    height: 120px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color:rgb(30, 149, 133);;
     border-width: 0px 0px 3px 0px;
     border-color: whitesmoke;
     cursor: pointer;
+    position: fixed;
+    left: 750px;
+    top: 200px;
+    font-family: sans-serif;
+    padding-top: 50px;
+    background-image: url(/imagens/usuario.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 60px 60px;
+    background-color: white;
 }
 
 /*Muda Tela*/

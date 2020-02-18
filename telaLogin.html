@@ -3,41 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clone do Portal do Aluno</title>
+    <title>Espaço do Estudante SESI SENAI</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://estudante.sesisenai.org.br/img/favicon.ico" type="image/x-icon">
 </head>
 <body>  
     
-    <button class="botaoSesi" onclick="pagina()"></button>  
+    <button id="botaoSesi" onclick="pagina()"></button>  
     
-    <div class="caixa-login">
-        <h2 class="textoBemVindo">
+    <div id="caixa-login">
+        <h2 id="textoBemVindo">
             Bem-Vindo 
         </h2>
-        <h2 class="textoaoEspacoEstudante">
+        <h2 id="textoaoEspacoEstudante">
             ao Espaço do Estudante
         </h2>
-        <input type="text" placeholder="Usuário" class="textoLogin">
+        <input type="text" placeholder="Usuário" id="textoLogin">
         <br>
         <br>
-        <input type="password" placeholder="Senha" class="textoSenha" >
+        <input type="password" placeholder="Senha" id="textoSenha" >
         <br>
         <br>
-        <button class="botaoLogin" onclick="login()">Entrar</button>
+        <button id="botaoLogin" onclick='login()'>Entrar</button>
         <br>
         <br>
-        <button class="botaoEsqueceuSenha">Esqueceu sua senha?</button>
+        <button id="botaoEsqueceuSenha">Esqueceu sua senha?</button>
         <br>
-        <img src="googleplay.png" class="imagemGooglePlay">
-        <img src="apple.png" class="imagemApple">
+        <img src="/imagens/googleplay.png" id="imagemGooglePlay">
+        <img src="/imagens/apple.png" id="imagemApple">
                 
         <script>              
             function login(){  
-            var texto = document.querySelector('.textoLogin').value;  
-            var senha = document.querySelector('.textoSenha').value;  
+            var texto = document.querySelector('#textoLogin').value;          
+            var senha = document.querySelector('#textoSenha').value;  
             if(texto == 'nathan' && senha == '123'){
             alert("Logado"); 
-            window.open('telaPrincipal.html');              
+            window.location.assign("telaPrincipal.html");              
             }
             else{
             alert('Errado');
@@ -50,6 +51,6 @@
         </script>    
     </div>
 
-    <label  class="aParadaAli">Uma nova maneira para você vivenciar os seus estudos.</label>
+    <p id="banner">Uma nova maneira para você vivenciar os seus estudos.</p>
 </body>
 </html>
