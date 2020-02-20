@@ -6,51 +6,76 @@
     <title>Espaço do Estudante SESI SENAI</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="https://estudante.sesisenai.org.br/img/favicon.ico" type="image/x-icon">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>  
     
     <button id="botaoSesi" onclick="pagina()"></button>  
     
-    <div id="caixa-login">
-        <h2 id="textoBemVindo">
-            Bem-Vindo 
-        </h2>
-        <h2 id="textoaoEspacoEstudante">
-            ao Espaço do Estudante
-        </h2>
-        <input type="text" placeholder="Usuário" id="textoLogin">
-        <br>
-        <br>
-        <input type="password" placeholder="Senha" id="textoSenha" >
-        <br>
-        <br>
-        <button id="botaoLogin" onclick='login()'>Entrar</button>
-        <br>
-        <br>
+    <div class="login">
+    
+        <h1>Bem Vindo</h1>
+        <span id="subtitulo">ao Espaço Estudante</span>
+    
+        <div class="inputs_login">
+            <i class="fa fa-user"></i>
+            <input type="text" placeholder="Usuário" id="usuario">
+        </div>
+    
+        <div class="inputs_login">
+            <i class="fa fa-lock"></i>
+            <input id="senha" type="password" placeholder="Senha">
+        </div>
+    
+        <div id="divMostrarSenha">
+            <input type="checkBox" id="botaoLogin" onchange="mostrarSenha()">Mostrar Senha
+        </div>
+    
+        <div id="divBotaoEntrar">
+        <button id="botaoEntrar" onclick="login()">Entrar</button>
         <button id="botaoEsqueceuSenha">Esqueceu sua senha?</button>
-        <br>
-        <img src="/imagens/googleplay.png" id="imagemGooglePlay">
-        <img src="/imagens/apple.png" id="imagemApple">
-                
-        <script>              
-            function login(){  
-            var texto = document.querySelector('#textoLogin').value;          
-            var senha = document.querySelector('#textoSenha').value;  
-            if(texto == 'nathan' && senha == '123'){
-            alert("Logado"); 
-            window.location.assign("telaPrincipal.html");              
-            }
-            else{
-            alert('Errado');
-            }       
-            };
-
-            function pagina(){
-                window.open('telaLogin.html');
-            }
-        </script>    
+        </div>
     </div>
 
+    
     <p id="banner">Uma nova maneira para você vivenciar os seus estudos.</p>
+
+    
 </body>
 </html>
+
+<script>              
+    function login(){  
+    var texto = document.querySelector('#usuario').value;          
+    var senha = document.querySelector('#senha').value;  
+    if(texto == "" || senha == ""){
+        alert("Errado, preencha corretamente os dados");
+    }
+
+    else if(texto == "nathan" && senha == "123"){
+        alert("Logado"); 
+        window.location.assign("telaPrincipal.html"); 
+    }       
+    };
+
+    function pagina(){
+        window.open('telaLogin.html');
+    }
+
+    function mostrarSenha(){
+        var senha = document.querySelector("#senha");
+        var botao = document.querySelector("#botaoLogin")
+        if(botaoLogin.checked)
+        {
+            senha.type = "text";
+        }
+        else if(senha.value == "")
+        {
+            alert("Nada foi digitado no campo Senha");
+            botaoLogin.checked = false;
+        }
+        else{
+            senha.type = "password";
+        }
+    }
+</script>
